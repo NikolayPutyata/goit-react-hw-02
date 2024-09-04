@@ -1,8 +1,12 @@
 import s from "./Feedback.module.css";
 
-const Feedback = ({ goodCom, badCom, neutralCom, totalFeedback }) => {
-  const goodPercent = Math.round((goodCom / totalFeedback) * 100);
-
+const Feedback = ({
+  goodCom,
+  badCom,
+  neutralCom,
+  totalFeedback,
+  goodPercent,
+}) => {
   return (
     <>
       <ul className={s.list}>

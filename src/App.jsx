@@ -39,6 +39,7 @@ const App = () => {
   };
 
   const totalFeedback = obj.good + obj.neutral + obj.bad;
+  const goodPercent = Math.round((obj.good / totalFeedback) * 100);
 
   return (
     <>
@@ -56,6 +57,7 @@ const App = () => {
           badCom={obj.bad}
           neutralCom={obj.neutral}
           totalFeedback={totalFeedback}
+          goodPercent={goodPercent}
         />
       ) : (
         <Notification />
